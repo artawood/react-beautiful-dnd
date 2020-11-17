@@ -329,9 +329,6 @@ function getSecondarySelector(): TrySelect {
       const nextDraggableDimensions = dims[nextDraggableId].client.borderBox;
 
       if (nextDraggableDimensions.y !== ownDimensions.y) {
-
-        if (!impact.displaced.visible[ownProps.draggableId].shouldAnimate)
-          return { x: impact.displacedBy.point.x, y: 0 };
         return {
           x: nextDraggableDimensions.x - ownDimensions.x,
           y: nextDraggableDimensions.y - ownDimensions.y,
